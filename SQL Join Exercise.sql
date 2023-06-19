@@ -30,7 +30,9 @@ where categories.Name = 'Appliances' or categories.Name = 'Games';
  
  select products.Name, Sum(sales.Quantity) as 'Total # sold', Sum(sales.Quantity * sales.PricePerUnit) as 'Total Price Sold' from products
  left join sales on sales.ProductID = products.ProductID
- where productID = 97;
+ where products.productID = 97;
+ select * from sales where productID = 97;
+ 
  
 
 /* joins: find Product name, reviewer name, rating, and comment on the Visio TV. (only return for the lowest rating!) */
